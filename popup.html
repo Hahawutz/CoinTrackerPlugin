@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <title>Transaction Checker</title>
+  <style>
+    body {
+      padding: 20px;
+      width: 650px;
+      height: 500px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="mb-4">Coin Tracker</h1>
+    <form id="walletForm">
+      <div class="form-group">
+        <label for="walletAddress">Wallet Address:</label>
+        <input type="text" class="form-control" id="walletAddress" name="walletAddress"
+          placeholder="Enter Wallet Address" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Fetch Transactions</button>
+    </form>
+
+    <h2 class="mt-4">Transaction Details</h2>
+    <div class="table-responsive">
+      <table class="table table-dark table-bordered mt-3">
+        <thead class="thead-dark">
+          <tr>
+            <th>Date</th>
+            <th>Value (ETH)</th>
+            <th>Transcation</th>
+            <th>Tax Free</th>
+          </tr>
+        </thead>
+        <tbody id="transactionBody">
+          <!-- Hier werden die Transaktionen eingefügt -->
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2" id="taxFreeCoins" class="text-right"></td>
+            <td colspan="2" id="taxableSoldCoins" class="text-right"></td>
+          </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Dein eigenes JavaScript -->
+  <script src="popup.js"></script>
+</body>
+
+</html>
